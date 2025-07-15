@@ -40,12 +40,12 @@ public class MainFrame extends JFrame {
         cardLayout = new CardLayout();
         mainPanel = new JPanel(cardLayout);
 
-        mainPanel.add(new RentPanel(), "rent");
+        mainPanel.add(new RentPanel(), "rent");//吉岡
         mainPanel.add(new ReturnPanel(), "return");
         mainPanel.add(new InventoryPanel(), "inventory");
-        mainPanel.add(new MemberPanel(), "member");
-        mainPanel.add(new LendingPanel(), "lending");
-        mainPanel.add(new DVDRegisterPanel(), "dvdRegister");
+        mainPanel.add(new MemberPanel(), "member");//小倉
+        mainPanel.add(new LendingPanel(), "lending");//吉岡
+        mainPanel.add(new DVDRegisterPanel(), "dvdRegister");//小倉
 
         // ボタンのアクション（カード切り替え）
         rentBtn.addActionListener(e -> cardLayout.show(mainPanel, "rent"));
