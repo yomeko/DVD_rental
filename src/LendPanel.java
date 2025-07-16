@@ -12,20 +12,20 @@ public class LendPanel extends JPanel {
 	public LendPanel(MainFrame frame) {
 		//ボタンとかフィールド作成
     	setLayout (new GridLayout(3, 2));
-    	JTextField memberField = new JTextField();
+    	JTextField idField = new JTextField();
     	JTextField dvdCodeField = new JTextField();
     	JButton button1=new JButton("貸出");
     	JButton button2=new JButton("TOPへ戻る");
     	//DB実行
     	button1.addActionListener(e -> {
-        	DB.lendDVD(memberField.getText(),( dvdCodeField.getText()));
+        	DB.lendDVD(idField.getText(),( dvdCodeField.getText()));
         	JOptionPane.showMessageDialog(this, "貸出しました。");
         	});
         //TOP戻る
     	button2.addActionListener(e -> frame.showPanel("TOP"));
         //部品追加
     	add(new JLabel("会員ID"));
-    	add(memberField);
+    	add(idField);
     	add(new JLabel("DVDコード"));
     	add(dvdCodeField);
     	add(button1); //貸出
