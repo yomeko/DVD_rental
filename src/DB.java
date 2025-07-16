@@ -31,7 +31,7 @@ public class DB {
 	
 	public static void insertDVD(String code,String title) {
 		try(Connection conn =DriverManager.getConnection(URL,USER,PASS);
-				PreparedStatement ps = conn.prepareStatement("INSERT INTO book(code,title,is_lent) VALUES(?,?,false)")){
+				PreparedStatement ps = conn.prepareStatement("INSERT INTO dvd(code,title,is_lent) VALUES(?,?,false)")){
 			ps.setString(1, code);
 			ps.setString(2, title);
 			ps.executeUpdate();
