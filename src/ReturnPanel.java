@@ -7,7 +7,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import jp.ac.kcs.swing.library.DB;
-import jp.ac.kcs.swing.library.MainFrame;
 
 public class ReturnPanel extends JPanel {
 	public ReturnPanel(MainFrame frame) {
@@ -18,7 +17,7 @@ public class ReturnPanel extends JPanel {
     	JButton button2=new JButton("TOPへ戻る");
     	//DB返却処理
     	button1.addActionListener(e -> {
-        	DB.returnBook(dvdCodeField.getText());
+        	DB.returnDVD(dvdCodeField.getText());
         	JOptionPane.showMessageDialog(this, "返却しました。");
         	});
     	//TOPに戻るボタン
