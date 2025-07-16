@@ -18,7 +18,7 @@ public class ReturnPanel extends JPanel {
     	JButton button2=new JButton("TOPへ戻る");
     	//DB返却処理
     	button1.addActionListener(e -> {
-        	DB.ReturnDVD(codeField.getText());
+        	DB.returnDVD(codeField.getText());
         	JOptionPane.showMessageDialog(this, "返却しました。");
         	});
     	//TOPに戻るボタン
