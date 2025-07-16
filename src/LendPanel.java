@@ -7,7 +7,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import jp.ac.kcs.swing.library.DB;
-import jp.ac.kcs.swing.library.MainFrame;
 
 public class LendPanel extends JPanel {
 	public LendPanel(MainFrame frame) {
@@ -19,7 +18,7 @@ public class LendPanel extends JPanel {
     	JButton button2=new JButton("TOPへ戻る");
     	//DB実行
     	button1.addActionListener(e -> {
-        	DB.lendBook(memberField.getText(),( dvdCodeField.getText()));
+        	DB.lendDVD(memberField.getText(),( dvdCodeField.getText()));
         	JOptionPane.showMessageDialog(this, "貸出しました。");
         	});
         //TOP戻る
