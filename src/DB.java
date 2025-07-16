@@ -40,7 +40,7 @@ public class DB {
 		}
 	}
 
-	//本を貸出状態に更新する処理 
+	//DVDを貸出状態に更新する処理 
 	
 	public static void lendDVD(String id, String code) {
 		try(Connection conn =DriverManager.getConnection(URL,USER,PASS);
@@ -52,9 +52,9 @@ public class DB {
 		}
 	}
 	
-    //本の返却済み
+    //DVDの返却済み
 	
-	public static void ReturnDVD(String code) {
+	public static void returnDVD(String code) {
 		try(Connection conn =DriverManager.getConnection(URL,USER,PASS);
 				PreparedStatement ps = conn.prepareStatement("UPDATE dvd set is_lent =false WHERE code=?;")){
 			ps.setString(1, code);
@@ -65,7 +65,7 @@ public class DB {
 		
 	}
 
-	//貸し出し中の本リスト
+	//貸し出し中のDVDリスト
 	
 	public static List<String> getLentDVDs(){
 		List<String> dvds = new ArrayList<>();
