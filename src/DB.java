@@ -52,7 +52,7 @@ public class DB {
 		}
 	}
 	
-    //DVDの返却済み
+	//DVDの返却済み
 	
 	public static void returnDVD(String code) {
 		try(Connection conn =DriverManager.getConnection(URL,USER,PASS);
