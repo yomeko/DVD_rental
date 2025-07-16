@@ -1,3 +1,4 @@
+import java.awt.CardLayout;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
@@ -6,10 +7,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import jp.ac.kcs.swing.library.DB;
-
 public class ReturnPanel extends JPanel {
 	public ReturnPanel(MainFrame frame) {
+		CardLayout cardLayout = new CardLayout();
+		frame.add(frame, "main");
         //ボタンとか作成
     	setLayout (new GridLayout(2, 2));
     	JTextField codeField = new JTextField(); 
@@ -17,11 +18,11 @@ public class ReturnPanel extends JPanel {
     	JButton button2=new JButton("TOPへ戻る");
     	//DB返却処理
     	button1.addActionListener(e -> {
-        	DB.returnDVD(codeField.getText());
+        	DB.ReturnDVD(codeField.getText());
         	JOptionPane.showMessageDialog(this, "返却しました。");
         	});
     	//TOPに戻るボタン
-    	button2.addActionListener(e -> frame.showPanel("TOP"));
+    	button2.addActionListener(e -> cardLayout.show(frame, "main"));
     	//パネルに部品の追加
     	add(new JLabel("DVDコード"));
     	add(codeField);
