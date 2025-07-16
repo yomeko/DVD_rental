@@ -41,7 +41,7 @@ public class MainFrame extends JFrame {
         mainPanel = new JPanel(cardLayout);
 
         mainPanel.add(new RentPanel(), "rent");//吉岡
-        mainPanel.add(new ReturnPanel(), "return");
+        mainPanel.add(new ReturnPanel(null), "return");
         mainPanel.add(new InventoryPanel(), "inventory");
         mainPanel.add(new MemberPanel(), "member");//小倉
         mainPanel.add(new LendingPanel(), "lending");//吉岡

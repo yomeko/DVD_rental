@@ -12,8 +12,8 @@ public class Main {
 		JFrame frame = new JFrame("DVDレンタルシステム");
 		JPanel mainPanel = new JPanel(new CardLayout());
 
+		mainPanel.add(new ReturnPanel(), "return");
 		mainPanel.add(new RentPanel(), "rent");
-		mainPanel.add(new RentPanel(), "return");
 		mainPanel.add(new InventoryPanel(), "inventory");
 		mainPanel.add(new MemberPanel(), "member");
 		mainPanel.add(new LendingPanel(), "lending");
